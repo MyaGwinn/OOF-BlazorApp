@@ -1,0 +1,47 @@
+﻿@page "/overloading"
+<h>This page is meant to display the concept of Overloading</h>
+<p>Unfortunately, it is under construction, so here's a screenshot of the code:</p>
+
+<img src="images/Overloadingv4.PNG" alt="Image">
+
+
+<!-- This section would take user input for name and age
+Enough about me, what's your name?
+<input bind="InputName " /> <!-- allows for the input of a string -->
+<!--
+What's your age?
+<input bind="InputAge " />
+OutputString <!-- displays output from below -->
+-->
+<!-- This section would use the user input, but needs modifying to work
+{
+    //private string InputString { get; set; }
+    //private int InputAge { get; set; }
+    //private string OutputString { get; set; }
+    class NameTake
+    {
+        string user;
+        int age;
+        //default constructor
+        public NameTake()
+        {
+            user = "Joe";
+            age = 28;
+        }
+        //parameterized constructor
+        public NameTake(string name, int age1)
+        {
+            user = name;
+            age = age1;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            NameTake gs = new NameTake(); //default constructor called
+            NameTake gs1 = new NameTake(); // overload constructor put InputName, InputAge as the argument
+        }
+    }
+}
+-->

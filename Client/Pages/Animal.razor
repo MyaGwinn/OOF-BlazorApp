@@ -1,0 +1,43 @@
+﻿@page "/animal"
+
+<h1>Which animal from this fine selection do you like?</h1>
+<br />
+
+<!-- creates the button and @binds to InputString -->
+<button class="btn btn-primary" @bind="InputString"> <!--@onclick="CompareAnimal"-->Roach!</button>
+<br />
+<br />
+<button class="btn btn-primary" @bind="InputString"> <!--@onclick="CompareAnimal"-->Elephant!</button>
+<br />
+<br />
+<button class="btn btn-primary" @bind="InputString"> <!--@onclick="CompareAnimal"-->Kangaroo!</button>
+<br />
+<br />
+<button class="btn btn-primary" @bind="InputString"> <!--@onclick="CompareAnimal"-->Parrot!</button>
+<br />
+<br />
+<button class="btn btn-primary" @bind="InputString"> <!--@onclick="CompareAnimal"-->Penguin!</button>
+<br />
+<br />
+OOF, this page is under construction, come back later (or never)!
+Here's a screenshot of the code:
+
+<img src="images/Animalv3.PNG" alt="Image">
+
+<!-- supposed to reference to class
+{
+    private string InputString { get; set; }
+    private string OutputString { get; set; }
+
+    //tried to .new() style, which didn't work
+
+    private void CompareAnimal()
+    {
+        if(InputString == Animal.correctAnimal)
+            {
+                 OutputString = "This works!";
+            }
+    }
+}
+
+<!-- display response -->

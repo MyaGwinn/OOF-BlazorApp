@@ -1,0 +1,68 @@
+﻿@page "/animalquestion"
+<!--  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .animal_question_one {
+            background-color: papayawhip;
+            color: midnightblue;
+            border: 5px navy;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="animal_question_one">
+        <h2>
+            Tell me, dogs or cats?
+            <br /><br /> <!-- new line -->
+        </h2>
+        <p>
+            <!-- Creates a text box that can take several types of input -->
+            <input @bind="InputString " /> <!-- allows for the input of a string -->
+
+            <button class="btn btn-primary" @onclick="DoEvaluation">Enter!</button> <!-- creates the button and calls DoEvaluation() -->
+            <br /><br />
+            @OutputString <!-- displays calculated output -->
+        </p>
+    </div>
+</body>
+</html>
+
+
+@code
+
+{ //This section evaluates what the user inputed and provides custom responses
+            private string InputString { get; set; }
+
+            private string OutputString { get; set; }
+
+            private void DoEvaluation()
+
+            {
+                // if 'dog' was entered
+                if(InputString == "dog" || InputString == "dogs" || InputString == "doggy" || InputString == "doggo")
+                {
+                    OutputString = "Ah, the borkers. The puppers. The fluffy bois. Whatever it is kids are calling them these days. Anywho, the dog-sters are not the answer. The answer is parrot. Why? Because they're the best.";
+                }// if 'cat' was entered
+                else if(InputString == "cat" || InputString == "cats" || InputString == "kitty" || InputString == "kitten")
+                {
+                    OutputString = "A cat? I can't help but suspect you might have something called Toxoplasmosis. Look it up. Well cats are the wrong answer because parrots are the best. What's that? Facts.";
+                }// if 'parrot' was entered
+                else if(InputString == "parrot" || InputString == "parrots")
+                {
+                    OutputString = "Hmm, I appreciate those who try again. Well, I don't, but my creator does.";
+                }// if easter egg 'pinocchio' was entered
+                else if(InputString == "pinocchio")
+                {
+                    OutputString = "You shouldn't have done that. I don't like being made fun of.";
+                } // if nothing entered is applicable
+                else
+                {
+                    OutputString = "What's a " + InputString + "? Haaaa, you know there are rules right?";
+                }
+
+            } 
+    }
